@@ -1,0 +1,35 @@
+<!--{% extends 'blogapp/base.html' %}-->
+
+<!--{% load i18n %}-->
+
+<!--{% block title %}-->
+<!--    {% translate 'Blog'%}-->
+<!--{% endblock %}-->
+
+<!--{% block body %}-->
+<!--    <h1>{% translate 'Articles'%}:</h1>-->
+<!--    <div>-->
+<!--        {% if not articles %}-->
+<!--            <h3>{% translate 'No articles yet'%}</h3>-->
+<!--        {% else %}-->
+<!--        <ul>-->
+<!--            {% for article in articles %}-->
+<!--                {% blocktranslate %}-->
+<!--                <li>Article title: {{article.title}}</li>-->
+<!--                <li>Date of publication: {{article.pub_date}}</li>-->
+<!--                <li>Author's name: {{article.author.name}}</li>-->
+<!--                <li>Category: {{article.category.name}}</li>-->
+<!--                {% endblocktranslate %}-->
+<!--                <li>{% translate 'Tags'%}:-->
+<!--                    <ul>-->
+<!--                        {% for tag in article.tags.all %}-->
+<!--                        <li>{{ tag.name }}</li>-->
+<!--                        {% endfor %}-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--            {% endfor %}-->
+<!--        </ul>-->
+<!--        {% endif %}-->
+<!--    </div>-->
+<!--{% endblock %}-->
+

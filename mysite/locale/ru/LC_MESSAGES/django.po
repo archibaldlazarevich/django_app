@@ -1,0 +1,255 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-06 09:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: blogapp/templates/blogapp/article_list.html:6
+msgid "Blog"
+msgstr "Блог"
+
+#: blogapp/templates/blogapp/article_list.html:10
+msgid "Articles"
+msgstr "Статьи"
+
+#: blogapp/templates/blogapp/article_list.html:13
+msgid "No articles yet"
+msgstr "Статьи ещё не написаны"
+
+#: blogapp/templates/blogapp/article_list.html:17
+#, python-format
+msgid ""
+"\n"
+"                <li>Article title: %(article.title)s</li>\n"
+"                <li>Date of publication: %(article.pub_date)s</li>\n"
+"                <li>Author's name: %(article.author.name)s</li>\n"
+"                <li>Category: %(article.category.name)s</li>\n"
+"                "
+msgstr ""
+"\n"
+"                <li>Заголовок статьи: %(article.title)s</li>\n"
+"                <li>Дата публикации: %(article.pub_date)s</li>\n"
+"                <li>Автор: %(article.author.name)s</li>\n"
+"                <li>Категория: %(article.category.name)s</li>\n"
+"                "
+
+#: blogapp/templates/blogapp/article_list.html:23
+msgid "Tags"
+msgstr "Тэги"
+
+#: myauth/views.py:20
+msgid "welcome hello word"
+msgstr "Привет, мир!"
+
+#: myauth/views.py:26
+#, python-brace-format
+msgid "one product"
+msgid_plural "{count} products"
+msgstr[0] "{count} товар"
+msgstr[1] "{count} товара"
+msgstr[2] "{count} товаров"
+
+#: mysite/settings.py:147
+msgid "English"
+msgstr "Английский"
+
+#: mysite/settings.py:148
+msgid "Russian"
+msgstr "Русский"
+
+#: shopapp/models.py:24
+msgid "Product"
+msgstr "Товары"
+
+#: shopapp/models.py:25 shopapp/templates/shopapp/products_list.html:10
+msgid "Products"
+msgstr "Товары"
+
+#: shopapp/models.py:66 shopapp/templates/shopapp/order_detail.html:6
+#: shopapp/templates/shopapp/order_detail.html:10
+msgid "Order"
+msgstr "Заказ"
+
+#: shopapp/models.py:67
+msgid "Orders"
+msgstr "Заказы"
+
+#: shopapp/templates/shopapp/order_detail.html:13
+#: shopapp/templates/shopapp/order_detail.html:15
+msgid "Order by"
+msgstr "Автор заказа"
+
+#: shopapp/templates/shopapp/order_detail.html:17
+msgid "Promocode"
+msgstr "Промокод"
+
+#: shopapp/templates/shopapp/order_detail.html:18
+msgid "Delivery address"
+msgstr "Адрес доставки"
+
+#: shopapp/templates/shopapp/order_detail.html:22
+#, python-format
+msgid ""
+"\n"
+"                There is only one product.\n"
+"                "
+msgid_plural ""
+"\n"
+"                There are %(products_count)s products.\n"
+"            "
+msgstr[0] ""
+"\n"
+"                В заказе %(products_count)s товар.\n"
+"            "
+msgstr[1] ""
+"\n"
+"                В заказе %(products_count)s товара.\n"
+"            "
+msgstr[2] ""
+"\n"
+"                В заказе %(products_count)s товаров.\n"
+"            "
+
+#: shopapp/templates/shopapp/order_detail.html:34
+#, python-format
+msgid ""
+"\n"
+"                                    There is only one image.\n"
+"                                    "
+msgid_plural ""
+"\n"
+"                                    There are %(images_count)s images.\n"
+"                                "
+msgstr[0] ""
+"\n"
+"                                    В заказе %(images_count)s картинка.\n"
+"                                "
+msgstr[1] ""
+"\n"
+"                                    В заказе %(images_count)s картинки.\n"
+"                                "
+msgstr[2] ""
+"\n"
+"                                    В заказе %(images_count)s картинок.\n"
+"                                "
+
+#: shopapp/templates/shopapp/order_detail.html:53
+msgid "No products yet"
+msgstr "Товаров в заказе нет"
+
+#: shopapp/templates/shopapp/order_detail.html:61
+#, python-format
+msgid ""
+"\n"
+"          <a href = \"%(order_update_url)s\">Update order</a>\n"
+"        </div>\n"
+"        <div>\n"
+"          <a href = \"%(orders_list_url)s\">Back to orders</a>\n"
+"        </div>\n"
+"        <div>\n"
+"          <a href = \"%(order_delete_url)s\">Delete order</a>\n"
+"        </div>\n"
+"    "
+msgstr ""
+"\n"
+"          <a href = \"%(order_update_url)s\">Обновить заказ</a>\n"
+"        </div>\n"
+"        <div>\n"
+"          <a href = \"%(orders_list_url)s\">Вернуться к списку заказов</a>\n"
+"        </div>\n"
+"        <div>\n"
+"          <a href = \"%(order_delete_url)s\">Удалить заказ</a>\n"
+"        </div>\n"
+"    "
+
+#: shopapp/templates/shopapp/products_list.html:6
+msgid "Products list"
+msgstr "Список товаров"
+
+#: shopapp/templates/shopapp/products_list.html:13
+#, python-format
+msgid ""
+"\n"
+"            There is only one product.\n"
+"            "
+msgid_plural ""
+"\n"
+"            There are %(products_count)s products.\n"
+"        "
+msgstr[0] ""
+"\n"
+"            Доступен %(products_count)s товар.\n"
+"        "
+msgstr[1] ""
+"\n"
+"            Доступно %(products_count)s товара.\n"
+"        "
+msgstr[2] ""
+"\n"
+"            Доступно %(products_count)s товаров.\n"
+"        "
+
+#: shopapp/templates/shopapp/products_list.html:23
+
+msgid "Name"
+msgstr "Название"
+
+#: shopapp/templates/shopapp/products_list.html:24
+msgid "Price"
+msgstr "Цена"
+
+#: shopapp/templates/shopapp/products_list.html:25
+msgid "no discount"
+msgstr "нет скидки"
+
+#: shopapp/templates/shopapp/products_list.html:26
+msgid "Discount"
+msgstr "Скидка"
+
+#: shopapp/templates/shopapp/products_list.html:35
+msgid ""
+"\n"
+"            <h3>No products yet</h3>\n"
+"        "
+msgstr ""
+"\n"
+"            <h3>Товаров нет</h3>\n"
+"        "
+
+#: shopapp/templates/shopapp/products_list.html:41
+#, python-format
+msgid ""
+"\n"
+"                <a href=\"%(create_product_url)s\">\n"
+"                    Create a new one</a>\n"
+"            "
+msgstr ""
+"\n"
+"    <a href=\"%(create_product_url)s\">\n"
+"        Создать новый товар</a>\n"
+"    "
+
+#: shopapp/templates/shopapp/products_list.html:46
+msgid "You don't have permission to create new a product"
+msgstr "У вас нет разрешения на создание нового товара"
+
+#~ msgid "No images uploaded yet"
+#~ msgstr "В заказе нет картинок"
+
+#~ msgid "Product in object"
+#~ msgstr "Товары в заказе"
