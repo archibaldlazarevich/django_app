@@ -1,0 +1,25 @@
+{% extends 'myauth/base.html'%}
+
+{% block title %}
+    Users list
+{% endblock %}
+
+{% block body %}
+    <h1>Users:</h1>
+    {% if profiles %}
+    <div>
+        {% for profile in profiles %}
+        <div>
+            <p><a href="{% url 'myauth:user-details' user_id=profile.user.pk%}">User id: {{profile.user.pk}}</a></p>
+            <p>Username: {{ profile.user.username }}</p>
+            <p>First name: {{ profile.user.first_name }}</p>
+            <p>Last name: {{ profile.user.last_name }}</p>
+            <p>Email: {{ profile.user.email }}</p>
+            <p>Bio: {{ profile.bio }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {%else%}
+    <h3> No users yet</h3>
+    {%endif%}
+{% endblock %}

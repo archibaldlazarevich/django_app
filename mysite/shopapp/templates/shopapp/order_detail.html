@@ -1,0 +1,71 @@
+{% extends 'shopapp/base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+    {% translate 'Order'%} #{{ object.pk }}
+{% endblock %}
+
+{% block body %}
+<h1>{% translate 'Order'%} #{{ object.pk }}</h1>
+  <div>
+    {%if order.user.first_name%}
+        <p>{% translate 'Order by'%} {{object.user.first_name}}</p>
+    {%else%}
+        <p>{% translate 'Order by'%} {{object.user.username}}</p>
+    {%endif%}
+        <p>{% translate 'Promocode'%} <code>{{object.promocode}}</code></p>
+        <p>{% translate 'Delivery address'%}: {{object.delivery_address}}</p>
+    {% with products=object.products.all %}
+        {% if products%}
+          <div>
+            {% blocktranslate count products_count=products|length%}
+                There is only one product.
+                {% plural %}
+                There are {{ products_count }} products.
+            {% endblocktranslate %}
+        </div>
+          <div>
+            <ul>
+                {% for product in products %}
+                    <li>{{product.name}} for ${{product.price}}</li>
+                        {% with images=product.images.all%}
+                            <li>
+                                {% blocktranslate count images_count=images|length%}
+                                    There is only one image.
+                                    {% plural %}
+                                    There are {{ images_count }} images.
+                                {% endblocktranslate %}
+                            </li>
+                            {% if images %}
+                                <li>
+                                    {% for img in images %}
+                                        <img src="{{ img.image.url }}" alt="{{ img.image.name }}" width="100" height="100">
+                                        {{ img.description }}
+                                    {% endfor %}
+                                </li>
+                            {% endif %}
+                        {% endwith %}
+                {% endfor %}
+            </ul>
+          </div>
+        {%else%}
+            {% translate 'No products yet'%}
+        {%endif%}
+    {% endwith %}
+  </div>
+<div>
+    {% url 'shopapp:order_update' pk=object.pk as order_update_url %}
+    {% url 'shopapp:orders_list' as orders_list_url %}
+    {% url 'shopapp:order_delete' pk=object.pk as order_delete_url %}
+    {% blocktranslate%}
+          <a href = "{{ order_update_url }}">Update order</a>
+        </div>
+        <div>
+          <a href = "{{ orders_list_url }}">Back to orders</a>
+        </div>
+        <div>
+          <a href = "{{ order_delete_url }}">Delete order</a>
+        </div>
+    {% endblocktranslate %}
+{% endblock %}

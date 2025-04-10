@@ -1,0 +1,25 @@
+{% extends 'myauth/base.html'%}
+
+{% block title %}
+    User information
+{% endblock %}
+
+{% block body %}
+    <h2>Detail</h2>
+    <p>Username: {{ profile }}</p>
+    <p>First name: {{ profile.user.first_name }}</p>
+    <p>Last name: {{ profile.user.last_name }}</p>
+    <p>Email: {{ profile.user.email }}</p>
+    <p>Bio: {{ profile.user.profile.bio }}</p>
+    {% if profile.avatar %}
+    <p>Avatar: <img src="{{ profile.avatar.url }}" alt="{{ profile.avatar.name }}"></p>
+    {% else %}
+    <p>You don't have avatar </p>
+    {% endif %}
+    {% if perms.is_staff %}
+    <a href="{% url 'myauth:update-profile' pk=profile.pk%}">
+    Update avatar
+    </a>
+    {% endif %}
+    <p>You don't have permission to change user's avatar</p>
+{% endblock %}
