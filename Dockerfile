@@ -12,4 +12,4 @@ RUN poetry install
 
 COPY mysite .
 
-CMD [ 'python', 'manage.py', 'collectstatic', '|' ,'gunicorn', 'mysite.wsgi:application', '--bind', '0.0.0.0:8000']
+CMD [ 'python', 'mysite/manage.py', 'collectstatic', '|' ,'gunicorn', 'mysite.wsgi:application', '--bind', '0.0.0.0:8000']
